@@ -1,9 +1,9 @@
 import React from "react";
 
-import styles from "../styles/Layout.module.css";
+import styles from "../styles/Layout.module.scss";
 import Navbar from "./Navbar";
 import Meta from "./Meta";
-import Header from "./Header";
+import Hero from "./Hero";
 
 const Layout = ({ children }) => {
   return (
@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
       <Navbar />
 
       <div className={styles.container}>
-        <Header />
+        <Hero />
         <main className={styles.main}>{children}</main>
       </div>
     </>

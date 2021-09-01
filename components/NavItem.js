@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const NavItem = ({ item }) => {
   return (
-    <li className={navStyles.navbar__item}>
+    <li className={navStyles.item}>
       <Link href={item.slug}>
-        <a className={navStyles.navbar__link}>
-          <span className={navStyles.navbar__span}>0{item.id}: </span>
+        <a className={navStyles.link}>
+          <span className={navStyles.span}>0{item.id}: </span>
           {item.name}
         </a>
       </Link>
