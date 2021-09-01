@@ -9,7 +9,7 @@ body {
   --bg-accent: #484a4d;
   --text-color: #dadce1;
   --text-secondary: rgb(255, 160, 97);
-  --nav-height: 90px;
+  --nav-height: 100px;
   --border: 1px solid #474a4d;
   --border-radius: 8px;
   --speed: 500ms;
@@ -49,4 +49,19 @@ img,
 picture {
   max-width: 100%;
   display: block;
+}
+
+html::-webkit-scrollbar {
+  width: 15px;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--bg-accent);
+  border-radius: 10px;
+  border: 4px var(--bg) solid;
+  background-clip: padding-box;
 }

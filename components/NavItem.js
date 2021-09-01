@@ -6,8 +6,9 @@ const NavItem = ({ item }) => {
     <li className={navStyles.item}>
       <Link href={item.slug}>
         <a className={navStyles.link}>
-          <span className={navStyles.span}>0{item.id}: </span>
+          <span className={navStyles.span}>{"<"}</span>
           {item.name}
+          <span className={navStyles.span}>{" />"}</span>
         </a>
       </Link>
     </li>
