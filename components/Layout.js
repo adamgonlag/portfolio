@@ -2,8 +2,8 @@ import React from "react";
 
 import styles from "../styles/Layout.module.scss";
 import Navbar from "./Navbar";
+
 import Meta from "./Meta";
-import Hero from "./Hero";
 
 const Layout = ({ children }) => {
   return (
@@ -12,9 +12,9 @@ const Layout = ({ children }) => {
       <Navbar />
 
       <div className={styles.container}>
-        <Hero />
         <main className={styles.main}>{children}</main>
       </div>
+      <div className={styles.footer}>Designed and built by Adam Gonlag</div>
     </>
   );
 };

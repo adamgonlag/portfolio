@@ -4,9 +4,9 @@ import NavItem from "./NavItem";
 import Button from "./Button";
 
 const menuItems = [
-  { id: 1, name: "About", slug: "/about" },
-  { id: 2, name: "Projects", slug: "/projects" },
-  { id: 3, name: "Contact", slug: "/contact" },
+  { id: 1, name: "Projects", slug: "/#projects" },
+  { id: 2, name: "About", slug: "/#about" },
+  { id: 3, name: "Contact", slug: "/#contact" },
 ];
 
 const Navbar = () => {
