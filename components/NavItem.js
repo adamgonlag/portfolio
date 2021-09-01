@@ -1,4 +1,4 @@
-import navStyles from "../styles/Navbar.module.css";
+import navStyles from "../styles/Navbar.module.scss";
 import Link from "next/link";
 
 const NavItem = ({ item }) => {
