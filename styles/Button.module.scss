@@ -1,5 +1,5 @@
 .button {
-  font-family: inherit;
+  font-family: var(--font-mono);
   font-size: inherit;
   position: relative;
   display: inline-block;
@@ -59,6 +59,8 @@
 
   &:hover {
     filter: brightness(1.2);
+    color: black;
+    font-weight: bold;
   }
 }
 
