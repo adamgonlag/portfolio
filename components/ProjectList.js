@@ -3,11 +3,12 @@ import ProjectItem from "./ProjectItem";
 
 export default function ProjectList({ projects }) {
   return (
-    <div className="dummy">
+    <section id="projects">
+      <h1 className="section__title">Some things Ive built</h1>
       {projects.map((project) => (
         <ProjectItem key={project.id} project={project} />
       ))}
-    </div>
+    </section>
   );
 }
 

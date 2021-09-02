@@ -5,7 +5,7 @@ import heroStyles from "../styles/Hero.module.scss";
 
 const Hero = () => {
   return (
-    <section className={heroStyles.hero}>
+    <section id="hero" className={heroStyles.hero}>
       <h1 className={heroStyles.title}>Adam Gonlag</h1>
       <h2 className={heroStyles.tagline}>
         Software Developer based in Sydney, Australia
@@ -15,7 +15,7 @@ const Hero = () => {
         consequatur optio aut dicta! Omnis amet neque ut saepe recusandae
         nesciunt.
       </p>
-      <Button text="View my work" />
+      <Button text="View my work" slug="/#projects" />
     </section>
   );
 };

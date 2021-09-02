@@ -7,15 +7,17 @@ import Meta from "./Meta";
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <div className={styles.layout}>
       <Meta />
       <Navbar />
-
-      <div className={styles.container}>
+      <div id="content" className={styles.content}>
+        {/* Load page content into main tag with children props*/}
         <main className={styles.main}>{children}</main>
       </div>
-      <div className={styles.footer}>Designed and built by Adam Gonlag</div>
-    </>
+      <footer id="footer" className={styles.footer}>
+        Designed and built by Adam Gonlag
+      </footer>
+    </div>
   );
 };
 
