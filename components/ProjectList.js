@@ -1,13 +1,16 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
+import styles from "../styles/ProjectList.module.scss";
 
 export default function ProjectList({ projects }) {
   return (
-    <section id="projects">
-      <h1 className="section__title">Some things Ive built</h1>
-      {projects.map((project) => (
-        <ProjectItem key={project.id} project={project} />
-      ))}
+    <section id="projects" className={styles.section}>
+      <h2 className="section__title">Projects</h2>
+      <ul className={styles.projectList}>
+        {projects.map((project) => (
+          <ProjectItem key={project.id} project={project} />
+        ))}
+      </ul>
     </section>
   );
 }

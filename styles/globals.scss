@@ -1,11 +1,3 @@
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-  line-height: 1.3;
-  background-color: var(--bg);
-}
-
 :root {
   --bg: #141414;
   --bg-accent: #484a4d;
@@ -13,11 +5,19 @@ body {
   --text-secondary: rgb(255, 160, 97);
   --nav-height: 100px;
   --border: 1px solid #08090a;
-  --border-radius: 8px;
+  --border-radius: 3px;
   --speed: 500ms;
   --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: var(--font-sans);
+  line-height: 1.3;
+  background-color: var(--bg);
 }
 
 a {
@@ -82,5 +82,20 @@ section {
 
   .section__title {
     color: white;
+    font-size: 2.5em;
+    margin: 0 0 50px 0;
+    display: flex;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0.8em;
+      width: 300px;
+      height: 1px;
+      margin-left: -10px;
+      background-color: white;
+    }
   }
 }
