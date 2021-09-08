@@ -1,20 +1,33 @@
 import React from "react";
+import styles from "../styles/About.module.scss";
 
 export default function About() {
   return (
-    <section id="about">
+    <section id="about" className={styles.section}>
       <h1 className="section__title">About</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt quia
-        cumque expedita itaque? Ducimus labore eaque soluta vero repellendus
-        fuga, error tenetur facilis quaerat sit totam, asperiores modi hic
-        dolores.
-      </p>
-      <br />
-      <p>
-        Eum hic aperiam et adipisci rerum, odio sequi explicabo fugit facilis
-        iusto libero eveniet corrupti aliquam ea incidunt reprehenderit maxime.
-      </p>
+      <div className={styles.about}>
+        <div className={styles.content}>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quo
+            corrupti sunt placeat voluptate deleniti, ea iusto repudiandae aut
+            consequatur.
+          </p>
+          <p>
+            Nihil, maxime labore cumque fugit delectus architecto distinctio
+            nulla? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusamus odio, ducimus quaerat natus ut dicta. Quisquam aspernatur
+            atque porro vitae.
+          </p>
+          <p>
+            Quam odit ducimus voluptatem sunt alias impedit numquam autem
+            incidunt, iste dolorem repellendus laborum magni maxime sint
+            laudantium nulla itaque?
+          </p>
+        </div>
+        <div className={styles.image}>
+          <img src="" alt="" />
+        </div>
+      </div>
     </section>
   );
 }

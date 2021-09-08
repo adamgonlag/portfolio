@@ -1,0 +1,65 @@
+.form {
+  position: relative;
+  text-align: center;
+
+  .field {
+    width: 400px;
+    margin: 2rem 0;
+    position: relative;
+    border-radius: 4px;
+
+    input:focus ~ label,
+    textarea:focus ~ label,
+    input:valid ~ label,
+    textarea:valid ~ label {
+      font-size: 0.75em;
+      background-color: var(--bg);
+      color: var(--text-secondary);
+      top: -12px;
+      -webkit-transition: all 0.225s ease;
+      transition: all 0.225s ease;
+    }
+
+    .input {
+      padding: 1.5em;
+      position: relative;
+      font-size: inherit;
+      width: 100%;
+      border: 1px solid var(--bg);
+      background-color: #2d2d2d;
+      color: white;
+      outline: none;
+      font-family: inherit;
+      border-radius: var(--border-radius);
+      transition: all 0.15s ease;
+
+      &:hover {
+        border-color: var(--text-secondary);
+        box-shadow: 0 10px 10px -15px var(--text-secondary);
+      }
+
+      &:focus {
+        border-color: limegreen;
+      }
+    }
+
+    .label {
+      color: white;
+      padding: 0.4rem 1rem;
+      position: absolute;
+      top: 19px;
+      left: 8px;
+      transition: all 0.25s ease;
+      pointer-events: none;
+      border-radius: 3px;
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+
+  button {
+    margin: 0;
+  }
+}

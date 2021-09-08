@@ -1,16 +1,18 @@
 import React from "react";
-import contactStyles from "../styles/Contact.module.scss";
+import styles from "../styles/Contact.module.scss";
+import ContactForm from "../components/ContactForm";
 
 export default function Contact() {
   return (
-    <section id={contactStyles.contact}>
+    <section id="contact" className={styles.section}>
       <h1 className="section__title">Contact</h1>
-      <div className={contactStyles.form}>
-        <form action="">
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Message" />
-          <button type="submit">Submit</button>
-        </form>
+      <div className={styles.content}>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quo
+          corrupti sunt placeat voluptate deleniti, ea iusto repudiandae aut
+          consequatur.
+        </p>
+        <ContactForm />
       </div>
     </section>
   );

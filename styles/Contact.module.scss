@@ -1,18 +1,13 @@
-#contact {
+.section {
   align-self: flex-start;
+  margin-bottom: 100px;
+  color: white;
 
-  .form {
-    height: 400px;
-    width: 400px;
-    background-color: rgb(141, 141, 141);
+  .content {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-
-    input {
-      display: block;
-      padding: 10px;
-      margin: 20px 0px;
-    }
+    align-items: center;
+    text-align: center;
   }
 }
