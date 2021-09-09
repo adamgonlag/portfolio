@@ -5,7 +5,7 @@ import ContactForm from "../components/ContactForm";
 export default function Contact() {
   return (
     <section id="contact" className={styles.section}>
-      <h1 className="section__title">Contact</h1>
+      <h1 className="section__title">Get in touch</h1>
       <div className={styles.content}>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quo

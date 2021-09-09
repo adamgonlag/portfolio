@@ -64,7 +64,7 @@ export default function ContactForm() {
         </label>
       </div>
 
-      <Button type="submit" text="Submit" slug="#"></Button>
+      <Button type="submit" text="Say Hi!" slug="#"></Button>
     </form>
   );
 }

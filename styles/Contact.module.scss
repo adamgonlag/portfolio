@@ -1,7 +1,13 @@
 .section {
-  align-self: flex-start;
   margin-bottom: 100px;
   color: white;
+
+  h1 {
+    align-self: center;
+    &::after {
+      display: none;
+    }
+  }
 
   .content {
     display: flex;
