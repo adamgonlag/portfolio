@@ -1,10 +1,19 @@
 import navStyles from "../styles/Navbar.module.scss";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { pathToRegexp } from "path-to-regexp";
 
 const NavItem = ({ item }) => {
+  const router = useRouter();
+  const { asPath } = useRouter();
+
+  const activeStyle = `${navStyles.active} ${navStyles.item}`;
+
   return (
-    <li className={navStyles.item}>
-      <Link href={item.slug}>
+    <li
+      className={asPath.slice(2) === item.slug ? activeStyle : navStyles.item}
+    >
+      <Link href={"/#" + item.slug}>
         <a className={navStyles.link}>
           <span className={navStyles.span}>{"<"}</span>
           {item.name}

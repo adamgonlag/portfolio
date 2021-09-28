@@ -14,10 +14,3 @@ export default function ProjectList({ projects }) {
     </section>
   );
 }
-
-export const getStaticProps = async () => {
-  const res = await fetch(`${server}/api/projects`);
-  const projects = await res.json();
-
-  return { props: { projects } };
-};

@@ -53,5 +53,10 @@
       color: var(--text-secondary);
       margin: 0 2px;
     }
+
+    .active {
+      color: var(--text-secondary);
+      filter: brightness(1.2);
+    }
   }
 }
