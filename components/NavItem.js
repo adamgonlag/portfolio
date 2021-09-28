@@ -1,7 +1,6 @@
 import navStyles from "../styles/Navbar.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { pathToRegexp } from "path-to-regexp";
 
 const NavItem = ({ item }) => {
   const router = useRouter();
