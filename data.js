@@ -2,17 +2,21 @@ export const projects = [
   {
     id: "1",
     category: "featured",
-    title: "Street Fighter Tic Tac Toe",
+    title: "Tempo Run",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti qui, a repellendus perspiciatis accusantium quas velit dolores architecto! Exercitationem repellendus asperiores perspiciatis quidem dignissimos autem accusamus voluptate debitis dolorum quibusdam. Enim laborum ex deserunt vel, omnis debitis similique eum sunt.",
-    tech: ["HTML", "Vanilla Javascript", "CSS"],
+    tech: ["Express", "Spotify API", "React", "Sass"],
     links: {
-      github: "http://github.com/",
-      demo: "https://github.com/",
+      github: "https://github.com/adamgonlag/tempo-run",
+      demo: "https://hidden-gorge-82205.herokuapp.com/",
     },
     image: {
-      src: "https://brittanychiang.com/static/3936989a99991beb6d649d7a7039df60/f47db/demo.avif",
-      alt: "puppies",
+      src: "./spotify.png",
+      alt: "Tempo Run screenshot",
+    },
+    gif: {
+      src: "./spotify.gif",
+      alt: "Tempo Run gif",
     },
   },
   {
@@ -23,60 +27,36 @@ export const projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti qui, a repellendus perspiciatis accusantium quas velit dolores architecto! Exercitationem repellendus asperiores perspiciatis quidem dignissimos autem accusamus voluptate debitis dolorum quibusdam. Enim laborum ex deserunt vel, omnis debitis similique eum sunt.",
     tech: ["Ruby", "Sinatra", "Postgress", "HTML", "CSS"],
     links: {
-      github: "http://github.com/",
-      demo: "https://github.com/",
+      github: "https://github.com/adamgonlag/trading_cards",
+      demo: "https://nameless-castle-77437.herokuapp.com/",
     },
     image: {
-      src: "https://brittanychiang.com/static/3936989a99991beb6d649d7a7039df60/f47db/demo.avif",
-      alt: "puppies",
+      src: "./marvel.png",
+      alt: "marvel trading cards",
+    },
+    gif: {
+      src: "./marvel.gif",
+      alt: "marvel trading cards gif",
     },
   },
   {
     id: "3",
     category: "featured",
-    title: "Tempo Run",
+    title: "Street Fighter Tic Tac Toe",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti qui, a repellendus perspiciatis accusantium quas velit dolores architecto! Exercitationem repellendus asperiores perspiciatis quidem dignissimos autem accusamus voluptate debitis dolorum quibusdam. Enim laborum ex deserunt vel, omnis debitis similique eum sunt.",
-    tech: ["Express", "Spotify API", "React", "Sass"],
+    tech: ["HTML", "Vanilla Javascript", "CSS"],
     links: {
-      github: "http://github.com/",
-      demo: "https://github.com/",
+      github: "https://github.com/adamgonlag/tictactoe",
+      demo: "https://adamgonlag.github.io/tictactoe/",
     },
     image: {
-      src: "https://brittanychiang.com/static/3936989a99991beb6d649d7a7039df60/f47db/demo.avif",
-      alt: "puppies",
+      src: "./street-fighter.png",
+      alt: "street fighter screenshot",
     },
-  },
-  {
-    id: "4",
-    category: "featured",
-    title: "Feed Me",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti qui, a repellendus perspiciatis accusantium quas velit dolores architecto! Exercitationem repellendus asperiores perspiciatis quidem dignissimos autem accusamus voluptate debitis dolorum quibusdam. Enim laborum ex deserunt vel, omnis debitis similique eum sunt.",
-    tech: ["Express", "Spoonacular  API", "React", "Sass"],
-    links: {
-      github: "http://github.com/",
-      demo: "https://github.com/",
-    },
-    image: {
-      src: "https://brittanychiang.com/static/3936989a99991beb6d649d7a7039df60/f47db/demo.avif",
-      alt: "puppies",
-    },
-  },
-  {
-    id: "5",
-    category: "featured",
-    title: "Portfolio",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti qui, a repellendus perspiciatis accusantium quas velit dolores architecto! Exercitationem repellendus asperiores perspiciatis quidem dignissimos autem accusamus voluptate debitis dolorum quibusdam. Enim laborum ex deserunt vel, omnis debitis similique eum sunt.",
-    tech: ["Express", "Spoonacular  API", "React", "Next.js", "Sass"],
-    links: {
-      github: "http://github.com/",
-      demo: "https://github.com/",
-    },
-    image: {
-      src: "https://brittanychiang.com/static/3936989a99991beb6d649d7a7039df60/f47db/demo.avif",
-      alt: "puppies",
+    gif: {
+      src: "./street-fighter.gif",
+      alt: "street fighter gif",
     },
   },
 ];
