@@ -66,11 +66,11 @@ picture {
 }
 
 html::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 html::-webkit-scrollbar-track {
-  background: var(--bg);
+  background: rgb(37, 37, 37);
 }
 
 html::-webkit-scrollbar-thumb {
