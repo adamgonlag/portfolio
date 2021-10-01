@@ -18,8 +18,25 @@
     align-items: center;
     justify-content: space-between;
 
-    .logo {
-      font-size: 2rem;
+    .logoContainer {
+      .logo {
+        width: 55px;
+        height: 55px;
+        // transform-box: fill-box;
+        // transform-origin: center;
+        transition: all 1s ease;
+
+        filter: invert(73%) sepia(52%) saturate(744%) hue-rotate(318deg)
+          brightness(102%) contrast(102%);
+
+        &:hover {
+          transform: rotate(360deg) scale(1.2);
+
+          cursor: pointer;
+          // stroke: black;
+          // fill: blue;
+        }
+      }
     }
 
     .list {

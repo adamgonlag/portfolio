@@ -73,17 +73,14 @@
     justify-content: center;
     grid-area: 1 / 6 / -1 / -1;
     transition: all 0.15s ease-in-out;
-    // background: rgba(255, 145, 0, 0.253);
-    // mix-blend-mode: screen;
 
     img {
       object-fit: cover;
       height: 100%;
 
       border-radius: var(--border-radius);
-      // box-shadow: 0 10px 30px -15px var(--text-secondary);
-      filter: grayscale(10%);
-      opacity: 0.5;
+      // filter: grayscale(10%);
+      opacity: 0.8;
       transition: all 0.15s ease-in-out;
       transition: transform 0.3s ease-in-out;
 
@@ -91,7 +88,7 @@
         cursor: pointer;
         filter: none;
         opacity: 1;
-        filter: saturate(150%);
+        filter: saturate(120%);
         transform: scale(1.01);
       }
     }

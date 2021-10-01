@@ -4,15 +4,19 @@ import NavItem from "./NavItem";
 import Button from "./Button";
 import pageLinks from "../pageLinks";
 import { motion } from "framer-motion";
+import Logo from "./Logo";
 
 const Navbar = () => {
+  const startAnim = 1;
+
   const ulAnimation = {
     hidden: { opacity: 0, y: "-50px" },
     show: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 1,
+        delay: startAnim,
+        delayChildren: 0,
         staggerChildren: 0.3,
         ease: "easeInOut",
       },
@@ -25,7 +29,7 @@ const Navbar = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.6,
         ease: "easeInOut",
       },
     },
@@ -34,7 +38,7 @@ const Navbar = () => {
   return (
     <nav className={navStyles.navbar}>
       <div className={navStyles.navItems}>
-        <div className={navStyles.logo}>AG</div>
+        <Logo />
         <motion.ul
           className={navStyles.list}
           variants={ulAnimation}
