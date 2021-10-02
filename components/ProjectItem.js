@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Project.module.scss";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function ProjectItem({ project }) {
   const [hover, setHover] = useState(false);
@@ -24,9 +25,28 @@ export default function ProjectItem({ project }) {
     imageAlt = project.image.src;
   }
 
+  const projectVariants = {
+    initial: {},
+  };
+
+  const imageVariants = {
+    initial: { opacity: 0, y: "-50px" },
+    animate: { opacity: 1, y: 0 },
+  };
+
+  const contentVariants = {
+    initial: { opacity: 0, x: "-50px" },
+    animate: { opacity: 1, x: 0 },
+  };
+
   return (
-    <li className={styles.project}>
-      <div className={styles.content}>
+    <motion.li
+      className={styles.project}
+      variants={projectVariants}
+      initial="initial"
+      animate="animate"
+    >
+      <motion.div className={styles.content} variants={contentVariants}>
         <h1 className={styles.heading}>{project.title}</h1>
         <div className={styles.description}>
           <p>{project.description}</p>
@@ -52,16 +72,17 @@ export default function ProjectItem({ project }) {
             </li>
           </ul>
         </div>
-      </div>
-      <div
+      </motion.div>
+      <motion.div
         className={styles.image}
         onMouseEnter={handleHover}
         onMouseLeave={handleLeave}
+        variants={imageVariants}
       >
         <a href={project.links.demo} target="_blank" rel="noreferrer">
           <img src={imgSource} alt={project.image.alt} />
         </a>
-      </div>
-    </li>
+      </motion.div>
+    </motion.li>
   );
 }

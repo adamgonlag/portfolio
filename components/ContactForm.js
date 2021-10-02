@@ -57,6 +57,8 @@ export default function ContactForm() {
           onChange={handleChange}
           type="text"
           name="message"
+          rows="10"
+          cols="50"
           required
         />
         <label className={styles.label} htmlFor="message">

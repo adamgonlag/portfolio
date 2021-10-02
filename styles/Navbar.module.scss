@@ -1,6 +1,6 @@
 .navbar {
   height: var(--nav-height);
-  background-color: transparent;
+  background: transparent;
   color: var(--text-color);
   padding: 0 3.5rem;
   width: 100%;
@@ -24,7 +24,7 @@
         height: 55px;
         // transform-box: fill-box;
         // transform-origin: center;
-        transition: all 1s ease;
+        transition: all 0.5s ease;
 
         filter: invert(73%) sepia(52%) saturate(744%) hue-rotate(318deg)
           brightness(102%) contrast(102%);
@@ -77,4 +77,12 @@
       filter: brightness(1.2);
     }
   }
+}
+
+.outHero {
+  background: linear-gradient(
+    90deg,
+    rgba(8, 8, 8, 1) 0%,
+    rgba(37, 37, 37, 1) 100%
+  );
 }

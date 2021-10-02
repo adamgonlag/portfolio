@@ -15,7 +15,6 @@ export default function Logo() {
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.5,
         duration: 1,
       },
     },
@@ -26,7 +25,6 @@ export default function Logo() {
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.5,
         duration: 1,
       },
     },

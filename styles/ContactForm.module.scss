@@ -15,7 +15,7 @@
       font-size: 0.75em;
       background-color: var(--bg);
       color: var(--text-secondary);
-      top: -12px;
+      top: -14px;
       -webkit-transition: all 0.225s ease;
       transition: all 0.225s ease;
     }
@@ -34,12 +34,11 @@
       transition: all 0.15s ease;
 
       &:hover {
-        border-color: var(--text-secondary);
-        box-shadow: 0 10px 10px -15px var(--text-secondary);
+        box-shadow: 0 5px 5px -5px var(--text-secondary);
       }
 
       &:focus {
-        border-color: var(--text-secondary);
+        box-shadow: 0 5px 5px -5px var(--text-secondary);
       }
     }
 
