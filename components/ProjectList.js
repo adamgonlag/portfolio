@@ -7,8 +7,8 @@ export default function ProjectList({ projects }) {
     <section id="projects" className={styles.section}>
       <h2 className="section__title">Projects</h2>
       <ul className={styles.projectList}>
-        {projects.map((project) => (
-          <ProjectItem key={project.id} project={project} />
+        {projects.map((project, i) => (
+          <ProjectItem i={i} key={project.id} project={project} />
         ))}
       </ul>
     </section>
