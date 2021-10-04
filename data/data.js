@@ -22,7 +22,7 @@ export const projectDatabase = [
   {
     id: "2",
     category: "featured",
-    title: "Marvel Trading Card Platform",
+    title: "Marvel Trading Cards",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti qui, a repellendus perspiciatis accusantium quas velit dolores architecto! Exercitationem repellendus asperiores perspiciatis quidem dignissimos autem accusamus voluptate debitis dolorum quibusdam. Enim laborum ex deserunt vel, omnis debitis similique eum sunt.",
     tech: ["Ruby", "Sinatra", "Postgress", "HTML", "CSS"],

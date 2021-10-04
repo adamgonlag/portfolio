@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { server } from "../config/index";
 import { useState, useEffect, useRef } from "react";
-import { projectDatabase } from "../data";
+import { projectDatabase } from "../data/data";
 
 import Head from "next/head";
 import Hero from "../components/Hero";

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 
 import styles from "../styles/Layout.module.scss";
 import Navbar from "./Navbar";
+import { FaGithub } from "react-icons/fa";
+import { FiLinkedin } from "react-icons/fi";
+import { AiOutlineMail } from "react-icons/ai";
 
 import Meta from "./Meta";
 
@@ -33,7 +36,29 @@ const Layout = ({ children }) => {
         <main className={styles.main}>{children}</main>
       </div>
       <footer id="footer" className={styles.footer}>
-        Designed and built by Adam Gonlag
+        <div className={styles.social}>
+          <ul>
+            <li>
+              <a
+                href="https://www.github.com/adamgonlag"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/adamgonlag"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FiLinkedin />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className={styles.content}>Designed and built by Adam Gonlag</div>
       </footer>
     </div>
   );

@@ -9,8 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.22.0",
+    "dotenv": "^10.0.0",
     "framer-motion": "^4.1.17",
     "next": "11.1.0",
+    "nodemailer": "^6.6.5",
+    "nodemailer-sendgrid": "^1.0.3",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "react": "^17.0.2",
     "react-icons": "^4.2.0",
     "react-intersection-observer": "^8.32.1",

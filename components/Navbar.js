@@ -77,7 +77,7 @@ const Navbar = ({ showNav, setShowNav, lastYPos }) => {
               return <NavItem key={item.id} item={item} />;
             })}
           <motion.li variants={liAnimation}>
-            <Button text="Resume" slug="/resume" />
+            <Button text="Resume" />
           </motion.li>
         </motion.ul>
       </div>

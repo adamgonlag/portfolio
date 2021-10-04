@@ -9,7 +9,7 @@ export default function ProjectItem({ project, i }) {
   const [hover, setHover] = useState(false);
 
   const controls = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.5 });
+  const { ref, inView } = useInView({ threshold: 0.4 });
 
   useEffect(() => {
     if (inView) {
@@ -59,12 +59,12 @@ export default function ProjectItem({ project, i }) {
   const contentVariants = {
     initial: (i) => {
       if (i % 2 === 0) {
-        return { opacity: 0, x: 100 };
+        return { opacity: 0, x: 40 };
       } else {
-        return { opacity: 0, x: -100 };
+        return { opacity: 0, x: -40 };
       }
     },
-    animate: { opacity: 1, x: 0 },
+    animate: { opacity: 1, x: 0, transition: { duration: 1 } },
   };
 
   return (

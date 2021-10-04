@@ -6,6 +6,13 @@
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
   gap: 10px;
+  background-color: var(--background-color);
+  opacity: 1;
+
+  // border: 2px solid var(--text-secondary);
+  // padding: 40px 50px;
+  border-radius: 10px;
+  // box-shadow: -9px 9px 0px var(--text-secondary);
 
   .content {
     padding: 20px 20px 20px 0px;
@@ -18,12 +25,14 @@
 
     .heading {
       margin: 0 0 30px 0;
-      font-size: 1.6em;
+      font-size: 2em;
+      text-transform: uppercase;
+      // text-shadow: 4px 4px 4px var(--text-secondary);
     }
 
     .description {
       margin: 0 0 20px 0;
-      background-color: var(--bg-accent);
+      background-color: var(--description);
       padding: 15px 20px;
       border-radius: var(--border-radius);
       box-shadow: 0 10px 30px -15px var(--bg);
@@ -73,6 +82,8 @@
     justify-content: center;
     grid-area: 1 / 6 / -1 / -1;
     transition: all 0.15s ease-in-out;
+    // border-radius: 10px;
+    // overflow: hidden;
 
     img {
       object-fit: cover;

@@ -81,9 +81,8 @@ const Hero = () => {
           initial="hidden"
           animate="show"
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro
-          consequatur optio aut dicta! Omnis amet neque ut saepe recusandae
-          nesciunt.
+          Civil Engineer turned software developer who is excited to begin a
+          career building awesome things for the web.
         </motion.p>
         <motion.div variants={buttonAnimation} initial="hidden" animate="show">
           <Button text="View my work" slug="/#projects" />

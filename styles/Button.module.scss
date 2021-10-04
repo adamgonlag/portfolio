@@ -13,7 +13,7 @@
   background: rgb(255, 134, 35);
 
   border-radius: 3px;
-  // font-weight: 600;
+  transition: all 0.15s ease;
 
   margin: 0;
   margin-left: 20px;
@@ -24,4 +24,9 @@
     // background: rgb(255, 117, 26);
     transform: scale(1.05);
   }
+}
+
+.success {
+  background: rgb(21, 136, 1);
+  transition: all 0.15s ease;
 }
