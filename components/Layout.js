@@ -2,33 +2,52 @@ import React, { useState, useEffect } from "react";
 
 import styles from "../styles/Layout.module.scss";
 import Navbar from "./Navbar";
-import { FaGithub } from "react-icons/fa";
+import Link from "next/link";
+
+import { FaGithub, FaArrowAltCircleUp } from "react-icons/fa";
 import { FiLinkedin } from "react-icons/fi";
-import { AiOutlineMail } from "react-icons/ai";
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
 
 import Meta from "./Meta";
 
 const Layout = ({ children }) => {
   const [lastYPos, setLastYPos] = useState(0);
   const [showNav, setShowNav] = useState(true);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
-    function handleScroll() {
+    const handleScroll = () => {
       const yPos = window.scrollY;
       const isScrollingUp = yPos < lastYPos;
 
       setShowNav(isScrollingUp);
       setLastYPos(yPos);
+    };
+
+    if (lastYPos > 200) {
+      setShowScrollToTop(true);
+    } else {
+      setShowScrollToTop(false);
     }
 
     window.addEventListener("scroll", handleScroll, false);
+
     return () => {
       window.removeEventListener("scroll", handleScroll, false);
     };
   }, [lastYPos]);
 
+  const handleClick = () => {};
+
   return (
     <div className={styles.layout}>
+      {showScrollToTop && (
+        <div className={styles.toTopIcon} onClick={handleClick}>
+          <Link href="/#hero" passHref>
+            <FaArrowAltCircleUp />
+          </Link>
+        </div>
+      )}
       <Meta />
       <Navbar lastYPos={lastYPos} showNav={showNav} setShowNav={setShowNav} />
       <div id="content" className={styles.content}>

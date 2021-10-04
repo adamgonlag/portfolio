@@ -7,11 +7,6 @@ export default function Contact() {
     <section id="contact" className={styles.section}>
       <h1 className="section__title">Get in touch</h1>
       <div className={styles.content}>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quo
-          corrupti sunt placeat voluptate deleniti, ea iusto repudiandae aut
-          consequatur.
-        </p>
         <ContactForm />
       </div>
     </section>
