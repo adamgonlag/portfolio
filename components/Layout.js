@@ -8,6 +8,8 @@ import { FaGithub, FaArrowAltCircleUp } from "react-icons/fa";
 import { FiLinkedin } from "react-icons/fi";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 
+import { motion, AnimatePresence } from "framer-motion";
+
 import Meta from "./Meta";
 
 const Layout = ({ children }) => {
@@ -37,17 +39,42 @@ const Layout = ({ children }) => {
     };
   }, [lastYPos]);
 
-  const handleClick = () => {};
+  const scrollAnimation = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 0.2,
+        ease: "easeInOut",
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.2,
+        ease: "easeInOut",
+      },
+    },
+  };
 
   return (
     <div className={styles.layout}>
-      {showScrollToTop && (
-        <div className={styles.toTopIcon} onClick={handleClick}>
-          <Link href="/#hero" passHref>
-            <FaArrowAltCircleUp />
-          </Link>
-        </div>
-      )}
+      <AnimatePresence>
+        {showScrollToTop && (
+          <motion.div
+            className={styles.toTopIcon}
+            variants={scrollAnimation}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+          >
+            <Link href="/#hero" passHref>
+              <FaArrowAltCircleUp />
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <Meta />
       <Navbar lastYPos={lastYPos} showNav={showNav} setShowNav={setShowNav} />
       <div id="content" className={styles.content}>
