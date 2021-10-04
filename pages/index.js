@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { server } from "../config/index";
 import { useState, useEffect, useRef } from "react";
+import { projectDatabase } from "../data";
 
 import Head from "next/head";
 import Hero from "../components/Hero";
@@ -28,8 +29,7 @@ export default function Home({ projects }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${server}/api/projects`);
-  const projects = await res.json();
+  const projects = projectDatabase;
 
   return { props: { projects } };
 };

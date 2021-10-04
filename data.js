@@ -1,4 +1,4 @@
-export const projects = [
+export const projectDatabase = [
   {
     id: "1",
     category: "featured",
