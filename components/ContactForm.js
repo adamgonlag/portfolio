@@ -41,6 +41,9 @@ export default function ContactForm() {
           setSubmitted(true);
           document.activeElement.blur();
         }
+      })
+      .catch((err) => {
+        console.log(err);
       });
   };
 

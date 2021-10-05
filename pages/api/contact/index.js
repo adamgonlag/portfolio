@@ -3,9 +3,6 @@ const nodemailerSendgrid = require("nodemailer-sendgrid");
 
 export default async function handler(req, res) {
   require("dotenv").config();
-  const SENDGRID_API_KEY = process.env.password;
-  // const USER = process.env.user;
-
   const transport = nodemailer.createTransport(
     nodemailerSendgrid({
       apiKey: process.env.SENDGRID_API_KEY,
