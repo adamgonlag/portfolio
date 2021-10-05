@@ -62,6 +62,7 @@ const Layout = ({ children }) => {
       <AnimatePresence>
         {showScrollToTop && (
           <motion.div
+            key="scrollToTop"
             className={styles.toTopIcon}
             variants={scrollAnimation}
             initial="hidden"
