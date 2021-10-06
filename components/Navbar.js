@@ -1,25 +1,34 @@
 import navStyles from "../styles/Navbar.module.scss";
-import React from "react";
+import React, { useState } from "react";
 import NavItem from "./NavItem";
 import Button from "./Button";
 import pageLinks from "../pageLinks";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "./Logo";
+import { MdClose } from "react-icons/md";
+import { FiMenu } from "react-icons/fi";
 
 const Navbar = ({ showNav, setShowNav, lastYPos }) => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
   let startAnim;
   let staggerChildren;
 
   let inHeroSection;
-  let bgClass = navStyles.navbar;
+  let navbarClass = navStyles.navbar;
   if (lastYPos < 600) {
     inHeroSection = true;
     startAnim = 1;
     staggerChildren = 0.3;
   } else {
-    bgClass += ` ${navStyles.outHero}`;
+    navbarClass += ` ${navStyles.outHero}`;
     inHeroSection = false;
     startAnim = 0;
+  }
+
+  let ulClass = navStyles.list;
+  if (navbarOpen) {
+    ulClass += ` ${navStyles.showMenu}`;
   }
 
   const navBarVariants = {
@@ -54,9 +63,13 @@ const Navbar = ({ showNav, setShowNav, lastYPos }) => {
     },
   };
 
+  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen);
+  };
+
   const navBar = (
     <motion.nav
-      className={bgClass}
+      className={navbarClass}
       variants={navBarVariants}
       initial="hidden"
       animate="show"
@@ -65,7 +78,7 @@ const Navbar = ({ showNav, setShowNav, lastYPos }) => {
       <div className={navStyles.navItems}>
         <Logo />
         <motion.ul
-          className={navStyles.list}
+          className={ulClass}
           variants={ulAnimation}
           initial="hidden"
           animate="show"
@@ -74,13 +87,26 @@ const Navbar = ({ showNav, setShowNav, lastYPos }) => {
           {pageLinks
             .filter((link) => link.type === "menu")
             .map((item) => {
-              return <NavItem key={item.id} item={item} />;
+              return (
+                <NavItem
+                  setNavbarOpen={setNavbarOpen}
+                  key={item.id}
+                  item={item}
+                />
+              );
             })}
           <motion.li variants={liAnimation}>
             <Button text="Resume" />
           </motion.li>
         </motion.ul>
       </div>
+      <button className={navStyles.hamburger} onClick={handleToggle}>
+        {navbarOpen ? (
+          <MdClose style={{ color: "#fff", width: "40px", height: "40px" }} />
+        ) : (
+          <FiMenu style={{ color: "#7b7b7b", width: "40px", height: "40px" }} />
+        )}
+      </button>
     </motion.nav>
   );
 

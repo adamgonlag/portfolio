@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 
-const NavItem = ({ item }) => {
+const NavItem = ({ item, setNavbarOpen }) => {
   const router = useRouter();
   const { asPath } = useRouter();
 
@@ -21,11 +21,16 @@ const NavItem = ({ item }) => {
       },
     },
   };
+  const closeMenu = () => {
+    console.log("close menu");
+    setNavbarOpen(false);
+  };
 
   return (
     <motion.li
       className={asPath.slice(2) === item.slug ? activeStyle : navStyles.item}
       variants={liAnimation}
+      onClick={closeMenu}
     >
       <Link href={"/#" + item.slug}>
         <a className={navStyles.link}>
