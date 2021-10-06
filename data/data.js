@@ -24,8 +24,8 @@ export const projectDatabase = [
     category: "featured",
     title: "Marvel Trading Cards",
     description:
-      "A web app that allows users to trade Marvel character themed trading cards. New cards can be added to the database by using the Marvel API.",
-    tech: ["Ruby", "Sinatra", "Postgress", "Authentication", "HTML", "CSS"],
+      "A web app that allows users to trade Marvel character themed trading cards.  New cards can be added to the database by using the Marvel API.",
+    tech: ["Ruby", "Sinatra", "Postgress", "HTML", "CSS"],
     links: {
       github: "https://github.com/adamgonlag/trading_cards",
       demo: "https://nameless-castle-77437.herokuapp.com/",

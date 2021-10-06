@@ -35,12 +35,12 @@ export default async function handler(req, response) {
     } catch (error) {
       console.log("Errors occurred, failed to deliver message");
 
-      if (err.response && err.response.body && err.response.body.errors) {
-        err.response.body.errors.forEach((error) =>
+      if (error.response && error.response.body && error.response.body.errors) {
+        error.response.body.errors.forEach((error) =>
           console.log("%s: %s", error.field, error.message)
         );
       } else {
-        console.log(err);
+        console.log(error);
       }
 
       res.status(err).json({});

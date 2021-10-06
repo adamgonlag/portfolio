@@ -1,8 +1,9 @@
 .project {
-  margin: 0 0 250px 0;
+  margin: 0 0 50px 0;
   color: white;
   display: grid;
   border-radius: 10px;
+  width: 100%;
 
   .content {
     padding: 20px 20px 20px 20px;
@@ -33,6 +34,7 @@
     .techList {
       margin: 0 0 20px 0;
       font-family: var(--font-mono);
+      font-size: clamp(0.5rem, 4vw, 1rem);
 
       ul {
         display: flex;
@@ -73,10 +75,9 @@
 
     img {
       object-fit: cover;
-      height: 100%;
+      width: 100%;
 
       border-radius: var(--border-radius);
-      // filter: grayscale(10%);
       opacity: 0.8;
       transition: all 0.15s ease-in-out;
       transition: transform 0.3s ease-in-out;
@@ -95,12 +96,16 @@
   }
 }
 
+@media (min-width: 375px) {
+}
+
 @media (min-width: 768px) {
   .project {
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     gap: 10px;
     background-color: var(--background-color);
+    margin-bottom: 150px;
     .content {
       padding: 20px 20px 20px 0px;
       width: 100%;

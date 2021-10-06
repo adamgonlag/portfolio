@@ -3,7 +3,7 @@
   text-align: center;
 
   .field {
-    width: 400px;
+    width: 100%;
     margin: 2rem 0;
     position: relative;
     border-radius: 4px;
@@ -15,7 +15,7 @@
       font-size: 0.75em;
       background-color: var(--bg);
       color: var(--text-secondary);
-      top: -14px;
+      top: -11px;
       -webkit-transition: all 0.225s ease;
       transition: all 0.225s ease;
     }
