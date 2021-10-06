@@ -4,8 +4,8 @@ export const projectDatabase = [
     category: "featured",
     title: "Tempo Run",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti qui, a repellendus perspiciatis accusantium quas velit dolores architecto! Exercitationem repellendus asperiores perspiciatis quidem dignissimos autem accusamus voluptate debitis dolorum quibusdam. Enim laborum ex deserunt vel, omnis debitis similique eum sunt.",
-    tech: ["Express", "Spotify API", "React", "Sass"],
+      "A web app to generate custom Spotify playlists based on a chosen set of seed artists, tempo and energy profile. Helps you stay in the zone when out for a run!",
+    tech: ["Express", "Spotify API", "Oauth2", "React", "Sass"],
     links: {
       github: "https://github.com/adamgonlag/tempo-run",
       demo: "https://hidden-gorge-82205.herokuapp.com/",
@@ -24,8 +24,8 @@ export const projectDatabase = [
     category: "featured",
     title: "Marvel Trading Cards",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti qui, a repellendus perspiciatis accusantium quas velit dolores architecto! Exercitationem repellendus asperiores perspiciatis quidem dignissimos autem accusamus voluptate debitis dolorum quibusdam. Enim laborum ex deserunt vel, omnis debitis similique eum sunt.",
-    tech: ["Ruby", "Sinatra", "Postgress", "HTML", "CSS"],
+      "A web app that allows users to trade Marvel character themed trading cards. New cards can be added to the database by using the Marvel API.",
+    tech: ["Ruby", "Sinatra", "Postgress", "Authentication", "HTML", "CSS"],
     links: {
       github: "https://github.com/adamgonlag/trading_cards",
       demo: "https://nameless-castle-77437.herokuapp.com/",
@@ -44,7 +44,7 @@ export const projectDatabase = [
     category: "featured",
     title: "Street Fighter Tic Tac Toe",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti qui, a repellendus perspiciatis accusantium quas velit dolores architecto! Exercitationem repellendus asperiores perspiciatis quidem dignissimos autem accusamus voluptate debitis dolorum quibusdam. Enim laborum ex deserunt vel, omnis debitis similique eum sunt.",
+      "A retro twist on the classic game of Tic-Tac-Toe for those who enjoy the sights and sounds of the early 90's",
     tech: ["HTML", "Vanilla Javascript", "CSS"],
     links: {
       github: "https://github.com/adamgonlag/tictactoe",

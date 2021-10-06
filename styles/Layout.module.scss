@@ -4,6 +4,10 @@
   min-height: 100vh;
 }
 
+.container {
+  // padding: 0px 150px;
+}
+
 .toTopIcon {
   font-size: 60px;
   color: var(--text-secondary);
@@ -32,7 +36,6 @@
 
 // All pages are loaded into the main tag
 .main {
-  padding: 0 0px;
   margin: 0px 0px;
   width: 100%;
   min-height: 100vh;

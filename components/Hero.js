@@ -3,7 +3,6 @@ import Button from "./Button";
 import { motion } from "framer-motion";
 
 import heroStyles from "../styles/Hero.module.scss";
-import ParticleBackground from "./ParticleBackground";
 
 const Hero = () => {
   const startAnim = 1.3;
@@ -57,7 +56,6 @@ const Hero = () => {
 
   return (
     <>
-      <ParticleBackground />
       <section id="hero" className={heroStyles.hero}>
         <motion.h1
           className={heroStyles.title}

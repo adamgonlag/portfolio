@@ -9,6 +9,7 @@ import { FiLinkedin } from "react-icons/fi";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 
 import { motion, AnimatePresence } from "framer-motion";
+import ParticleBackground from "./ParticleBackground";
 
 import Meta from "./Meta";
 
@@ -78,9 +79,13 @@ const Layout = ({ children }) => {
 
       <Meta />
       <Navbar lastYPos={lastYPos} showNav={showNav} setShowNav={setShowNav} />
+
       <div id="content" className={styles.content}>
+        <ParticleBackground />
         {/* Load page content into main tag with children props*/}
-        <main className={styles.main}>{children}</main>
+        <div className={styles.container}>
+          <main className={styles.main}>{children}</main>
+        </div>
       </div>
       <footer id="footer" className={styles.footer}>
         <div className={styles.social}>
