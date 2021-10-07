@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { projectDatabase } from "../data/data";
 
 import Head from "next/head";
+import Skills from "../components/Skills";
 import Hero from "../components/Hero";
 import ProjectList from "../components/ProjectList";
 import About from "../components/About";
@@ -19,9 +20,10 @@ export default function Home({ projects }) {
 
       <Hero />
 
-      <ProjectList projects={projects} />
-
       <About />
+      <Skills />
+
+      <ProjectList projects={projects} />
 
       <Contact />
     </>

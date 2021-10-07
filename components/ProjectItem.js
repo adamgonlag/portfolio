@@ -46,21 +46,15 @@ export default function ProjectItem({ project, i }) {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        // staggerChildren: 0.1,
+        staggerChildren: 0.3,
       },
     },
   };
 
-  const imageVariants = {
-    initial: (i) => {
-      if (i % 2 === 0) {
-        return { x: -20 };
-      } else {
-        return { x: 20 };
-      }
-    },
-    animate: { x: 0, transition: { duration: 1, ease: "linear" } },
-  };
+  // const imageVariants = {
+  //   initial: { opacity: 0 },
+  //   animate: { opacity: 1, transition: { ease: "linear" } },
+  // };
 
   const contentVariants = {
     initial: (i) => {
@@ -70,7 +64,7 @@ export default function ProjectItem({ project, i }) {
         return { opacity: 0, x: -40 };
       }
     },
-    animate: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+    animate: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeIn" } },
   };
 
   return (
@@ -116,8 +110,8 @@ export default function ProjectItem({ project, i }) {
         className={styles.image}
         onMouseEnter={handleHover}
         onMouseLeave={handleLeave}
-        variants={imageVariants}
-        custom={i}
+        // variants={imageVariants}
+        // custom={i}
       >
         <a href={project.links.demo} target="_blank" rel="noreferrer">
           <img src={imgSource} alt={project.image.alt} />

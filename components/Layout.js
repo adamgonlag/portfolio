@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/Layout.module.scss";
 import Navbar from "./Navbar";
 import Link from "next/link";
-
 import { FaGithub, FaArrowAltCircleUp } from "react-icons/fa";
 import { FiLinkedin } from "react-icons/fi";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
@@ -110,7 +109,9 @@ const Layout = ({ children }) => {
             </li>
           </ul>
         </div>
-        <div className={styles.content}>Designed and built by Adam Gonlag</div>
+        <div className={styles.content}>
+          <p> Designed and built by Adam Gonlag</p>
+        </div>
       </footer>
     </div>
   );

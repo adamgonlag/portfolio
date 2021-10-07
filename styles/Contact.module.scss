@@ -1,9 +1,8 @@
 .section {
-  margin-bottom: 200px;
   color: white;
-  margin-top: 200px;
 
   h1 {
+    margin-bottom: 10px;
     align-self: center;
     &::after {
       display: none;
