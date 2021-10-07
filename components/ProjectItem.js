@@ -9,7 +9,7 @@ export default function ProjectItem({ project, i }) {
   const [hover, setHover] = useState(false);
 
   const controls = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.4 });
+  const { ref, inView } = useInView({ threshold: 0.6 });
 
   useEffect(() => {
     if (inView) {
@@ -46,15 +46,21 @@ export default function ProjectItem({ project, i }) {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.1,
+        // staggerChildren: 0.1,
       },
     },
   };
 
-  // const imageVariants = {
-  //   initial: { opacity: 0 },
-  //   animate: { opacity: 0.25 },
-  // };
+  const imageVariants = {
+    initial: (i) => {
+      if (i % 2 === 0) {
+        return { x: -20 };
+      } else {
+        return { x: 20 };
+      }
+    },
+    animate: { x: 0, transition: { duration: 1, ease: "linear" } },
+  };
 
   const contentVariants = {
     initial: (i) => {
@@ -110,7 +116,8 @@ export default function ProjectItem({ project, i }) {
         className={styles.image}
         onMouseEnter={handleHover}
         onMouseLeave={handleLeave}
-        // variants={imageVariants}
+        variants={imageVariants}
+        custom={i}
       >
         <a href={project.links.demo} target="_blank" rel="noreferrer">
           <img src={imgSource} alt={project.image.alt} />
