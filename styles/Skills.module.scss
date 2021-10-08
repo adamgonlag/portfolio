@@ -1,0 +1,38 @@
+.skillsList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+
+  .skill {
+    width: 100%;
+    height: auto;
+    background-color: #484a4d71;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .skillsList {
+    grid-template-columns: repeat(8, 1fr);
+    width: 100%;
+    margin: 0 auto;
+    transition: all 0.5s ease-in-out;
+
+    .skill:hover {
+      transition: all 0.5s ease-in-out;
+      transform: scale(1.05);
+    }
+  }
+}

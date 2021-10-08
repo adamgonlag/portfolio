@@ -69,6 +69,7 @@ const Navbar = ({ showNav, setShowNav, lastYPos }) => {
 
   const navBar = (
     <motion.nav
+      key="navbar"
       className={navbarClass}
       variants={navBarVariants}
       initial="hidden"
@@ -76,8 +77,9 @@ const Navbar = ({ showNav, setShowNav, lastYPos }) => {
       exit="exit"
     >
       <div className={navStyles.navItems}>
-        <Logo />
+        <Logo key="logo" />
         <motion.ul
+          key="nav-list"
           className={ulClass}
           variants={ulAnimation}
           initial="hidden"
@@ -95,12 +97,16 @@ const Navbar = ({ showNav, setShowNav, lastYPos }) => {
                 />
               );
             })}
-          <motion.li variants={liAnimation}>
+          <motion.li key="resume-button" variants={liAnimation}>
             <Button text="Resume" />
           </motion.li>
         </motion.ul>
       </div>
-      <button className={navStyles.hamburger} onClick={handleToggle}>
+      <button
+        key="hamburger"
+        className={navStyles.hamburger}
+        onClick={handleToggle}
+      >
         {navbarOpen ? (
           <MdClose style={{ color: "#fff", width: "40px", height: "40px" }} />
         ) : (

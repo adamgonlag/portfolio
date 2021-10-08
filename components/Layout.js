@@ -4,8 +4,7 @@ import styles from "../styles/Layout.module.scss";
 import Navbar from "./Navbar";
 import Link from "next/link";
 import { FaGithub, FaArrowAltCircleUp } from "react-icons/fa";
-import { FiLinkedin } from "react-icons/fi";
-import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import { FiLinkedin, FiMail } from "react-icons/fi";
 
 import { motion, AnimatePresence } from "framer-motion";
 import ParticleBackground from "./ParticleBackground";
@@ -105,6 +104,15 @@ const Layout = ({ children }) => {
                 rel="noreferrer"
               >
                 <FiLinkedin />
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:adamgonlag@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FiMail />
               </a>
             </li>
           </ul>
