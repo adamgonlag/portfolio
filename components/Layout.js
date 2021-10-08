@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
       const yPos = window.scrollY;
       const isScrollingUp = yPos < lastYPos;
 
-      if (yPos === 0) {
+      if (yPos === 0 && showNav === false) {
         setShowNav(true);
       } else {
         setShowNav(isScrollingUp);
