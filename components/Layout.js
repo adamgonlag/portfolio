@@ -18,10 +18,15 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     const handleScroll = () => {
+      // const windowHeight = window.innerHeight;
       const yPos = window.scrollY;
       const isScrollingUp = yPos < lastYPos;
 
-      setShowNav(isScrollingUp);
+      if (yPos === 0) {
+        setShowNav(true);
+      } else {
+        setShowNav(isScrollingUp);
+      }
       setLastYPos(yPos);
     };
 
